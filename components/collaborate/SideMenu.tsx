@@ -48,7 +48,7 @@ const SideNav = () => {
                     </div>
                 </Link>
                 <Link href='/' >
-                    <div onClick={() => handleItemClick(2.5)}>
+                    <div onClick={() => handleItemClick(2.55)}>
                         <Image
                             src='/icons/Icon.svg'
                             width={30}
@@ -92,7 +92,7 @@ const SideNav = () => {
             <div className='flex mt-36 flex-col ml-6 justify-center  gap-4 items-center w-fit px-4'>
             {/* Values set based on screen size */}
             <Link href='/'>
-              <div onClick={() => handleItemClick(8.8)}>
+              <div onClick={() => handleItemClick(8.75)}>
                 <Image
                   src='/icons/arrow-right.svg'
                   width={20}
@@ -102,7 +102,7 @@ const SideNav = () => {
               </div>
             </Link>
             <Link href='/'>
-              <div onClick={() => handleItemClick(9.4)}>
+              <div onClick={() => handleItemClick(9.3)}>
                 <Image
                   src='/icons/setting.svg'
                   width={20}
@@ -112,7 +112,7 @@ const SideNav = () => {
               </div>
             </Link>
             <Link href='/'>
-              <div onClick={() => handleItemClick(9.95)}>
+              <div onClick={() => handleItemClick(9.9)}>
                 <Image
                   src='/icons/logout.svg'
                   width={20}
