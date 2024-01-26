@@ -23,7 +23,7 @@ export default function Home() {
   return (
     <main className="p-5 w-full space-y-6">
       <section className="flex flex-col xl:flex-row gap-6 w-full">
-        <Card className="xl:w-[60%] xl:mt-4">
+        <Card className="xl:w-[60%]  xl:mt-4">
           <div className="flex justify-between mb-6">
             <p className="text-xl pl-2 font-semibold">Sales Trend</p>
             <div className="flex gap-2 items-center">

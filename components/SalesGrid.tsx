@@ -76,7 +76,7 @@ const OrdersTable = () => {
         <Card className='h-full'>
 
             <div className='flex items-center justify-between mb-4'>
-                <p className='text-xl pl-4 capitalize'>last orders</p>
+                <p className='text-xl pl-4 capitalize font-semibold'>last orders</p>
 
                 <Link href='/' className='text-lg text-[#34CAA5]'>
                     See All
@@ -114,7 +114,7 @@ const OrdersTable = () => {
                                         <p>View</p>
                                     </DialogTrigger>
                                     <DialogContent>
-                                        {/* Add content for the dialog, if needed */}
+                                      
                                         <Invoice data={invoice} />
                                     </DialogContent>
                                 </Dialog>

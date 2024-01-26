@@ -92,7 +92,7 @@ const SideNav = () => {
             <div className='flex mt-36 flex-col ml-6 justify-center  gap-4 items-center w-fit px-4'>
             {/* Values set based on screen size */}
             <Link href='/'>
-              <div onClick={() => handleItemClick(window.innerWidth >= 1500 ? 9.7 : 9.95)}>
+              <div onClick={() => handleItemClick( 9.7)}>
                 <Image
                   src='/icons/arrow-right.svg'
                   width={20}
@@ -102,7 +102,7 @@ const SideNav = () => {
               </div>
             </Link>
             <Link href='/'>
-              <div onClick={() => handleItemClick(window.innerWidth >= 1500 ? 10.35 : 10.6)}>
+              <div onClick={() => handleItemClick(10.35)}>
                 <Image
                   src='/icons/setting.svg'
                   width={20}
@@ -112,7 +112,7 @@ const SideNav = () => {
               </div>
             </Link>
             <Link href='/'>
-              <div onClick={() => handleItemClick(window.innerWidth >= 1500 ? 10.95 : 11.2)}>
+              <div onClick={() => handleItemClick(10.56)}>
                 <Image
                   src='/icons/logout.svg'
                   width={20}
@@ -125,7 +125,7 @@ const SideNav = () => {
 
             {/* Indicator div for active item */}
             <div
-                className="absolute top-0 right-0 dark:bg-white bg-black h-8 w-[5px] transform -translate-y-2/4 rounded-tl rounded-bl"
+                className="absolute top-0 right-0 dark:bg-white bg-black h-6 w-[4px] transform -translate-y-2/4 rounded-tl rounded-bl"
                 style={{ top: activeItemIndex !== null ? `calc(${activeItemIndex + 1} * 56px)` : 0 }}
             ></div>
 
@@ -134,3 +134,7 @@ const SideNav = () => {
 }
 
 export default SideNav;
+
+
+
+
