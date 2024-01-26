@@ -1,0 +1,136 @@
+
+'use client'
+import Image from 'next/image'
+import Link from 'next/link'
+import React, { useState } from 'react';
+import { ModeToggle } from './ModeToggle'
+
+const SideNav = () => {
+    const [activeItemIndex, setActiveItemIndex] = useState<number | null>(null);
+
+    const handleItemClick = (index: number) => {
+        setActiveItemIndex(index);
+    };
+
+    return (
+        <div className='hidden md:flex flex-col justify-between pb-10 h-screen pt-28 border-r  px-4 relative'>
+
+            <div className='flex justify-center items-center flex-col gap-8 mt-[9px]'>
+                <Link href='/' className='block  dark:hidden'>
+                    <div onClick={() => handleItemClick(0.92)}>
+                        <Image
+                            src='/icons/grid.svg'
+                            width={40}
+                            height={40}
+                            alt='logo'
+                            className=''
+                        />
+                    </div>
+                </Link>
+                <Link href='/' className='hidden dark:block p-1'>
+                    <div onClick={() => handleItemClick(0.92)}>
+                        <Image
+                            src='/icons/grid-dark.svg'
+                            width={26}
+                            height={26}
+                            alt='logo'
+                        />
+                    </div>
+                </Link>
+                <Link href='/' >
+                    <div onClick={() => handleItemClick(1.85)}>
+                        <Image
+                            src='/icons/trend-up.svg'
+                            width={24}
+                            height={24}
+                            alt='logo'
+                        />
+                    </div>
+                </Link>
+                <Link href='/' >
+                    <div onClick={() => handleItemClick(2.85)}>
+                        <Image
+                            src='/icons/Icon.svg'
+                            width={40}
+                            height={40}
+                            alt='logo'
+                        />
+                    </div>
+                </Link>
+                <Link href='/' >
+                    <div onClick={() => handleItemClick(3.85)}>
+                        <Image
+                            src='/icons/box.svg'
+                            width={24}
+                            height={24}
+                            alt='logo'
+                        />
+                    </div>
+                </Link>
+                <Link href='/' >
+                    <div onClick={() => handleItemClick(4.7)}>
+                        <Image
+                            src='/icons/discount.svg'
+                            width={24}
+                            height={24}
+                            alt='logo'
+                        />
+                    </div>
+                </Link>
+                <Link href='/' className='mt-2'>
+                    <div onClick={() => handleItemClick(5.7)}>
+                        <Image
+                            src='/icons/info.svg'
+                            width={24}
+                            height={24}
+                            alt='logo'
+                        />
+                    </div>
+                </Link>
+                <ModeToggle />
+            </div>
+            <div className='flex mt-36 flex-col ml-4 justify-center  gap-4 items-center w-fit px-4'>
+            {/* Values set based on screen size */}
+            <Link href='/'>
+              <div onClick={() => handleItemClick(window.innerWidth >= 1500 ? 9.7 : 9.95)}>
+                <Image
+                  src='/icons/arrow-right.svg'
+                  width={24}
+                  height={24}
+                  alt='logo'
+                />
+              </div>
+            </Link>
+            <Link href='/'>
+              <div onClick={() => handleItemClick(window.innerWidth >= 1500 ? 10.35 : 10.6)}>
+                <Image
+                  src='/icons/setting.svg'
+                  width={24}
+                  height={24}
+                  alt='logo'
+                />
+              </div>
+            </Link>
+            <Link href='/'>
+              <div onClick={() => handleItemClick(window.innerWidth >= 1500 ? 10.95 : 11.2)}>
+                <Image
+                  src='/icons/logout.svg'
+                  width={24}
+                  height={24}
+                  alt='logo'
+                />
+              </div>
+            </Link>
+          </div>
+
+            {/* Indicator div for active item */}
+            <div
+                className="absolute top-0 right-0 dark:bg-white bg-black h-8 w-[5px] transform -translate-y-2/4 rounded-tl rounded-bl"
+                style={{ top: activeItemIndex !== null ? `calc(${activeItemIndex + 1} * 56px)` : 0 }}
+            ></div>
+
+        </div>
+    )
+}
+
+export default SideNav;
