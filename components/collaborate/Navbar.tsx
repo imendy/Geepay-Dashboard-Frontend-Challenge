@@ -96,7 +96,7 @@ const Navbar = () => {
           <AnimatePresence>
             <DropdownMenu>
               <DropdownMenuTrigger>
-                <div className="flex items-center space-x-2 border p-2 rounded-full">
+                <div className="flex items-center space-x-2 border py-1 px-2 rounded-full">
                   <Avatar>
                     <AvatarImage alt="Justin Bergson" src="/user.png" />
                     <AvatarFallback>JB</AvatarFallback>
@@ -110,6 +110,8 @@ const Navbar = () => {
                   <ChevronDownIcon className="w-5 h-5 text-gray-400 font-semibold" />
                 </div>
               </DropdownMenuTrigger>
+
+
               <DropdownMenuContent className="w-48">
                 <motion.div
                   initial={{ opacity: 0, x: 50 }}
