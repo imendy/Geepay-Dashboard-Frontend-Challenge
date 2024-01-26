@@ -38,7 +38,7 @@ const SideNav = () => {
                     </div>
                 </Link>
                 <Link href='/' >
-                    <div onClick={() => handleItemClick(1.65)}>
+                    <div onClick={() => handleItemClick(1.35)}>
                         <Image
                             src='/icons/trend-up.svg'
                             width={20}
@@ -48,7 +48,7 @@ const SideNav = () => {
                     </div>
                 </Link>
                 <Link href='/' >
-                    <div onClick={() => handleItemClick(2.45)}>
+                    <div onClick={() => handleItemClick(2.05)}>
                         <Image
                             src='/icons/Icon.svg'
                             width={30}
@@ -58,7 +58,7 @@ const SideNav = () => {
                     </div>
                 </Link>
                 <Link href='/' >
-                    <div onClick={() => handleItemClick(3.45)}>
+                    <div onClick={() => handleItemClick(3.05)}>
                         <Image
                             src='/icons/box.svg'
                             width={20}
@@ -68,7 +68,7 @@ const SideNav = () => {
                     </div>
                 </Link>
                 <Link href='/' >
-                    <div onClick={() => handleItemClick(4.3)}>
+                    <div onClick={() => handleItemClick(3.85)}>
                         <Image
                             src='/icons/discount.svg'
                             width={20}
@@ -78,7 +78,7 @@ const SideNav = () => {
                     </div>
                 </Link>
                 <Link href='/' className='mt-2'>
-                    <div onClick={() => handleItemClick(5.2)}>
+                    <div onClick={() => handleItemClick(4.3)}>
                         <Image
                             src='/icons/info.svg'
                             width={20}
@@ -92,7 +92,7 @@ const SideNav = () => {
             <div className='flex mt-36 flex-col ml-6 justify-center  gap-4 items-center w-fit px-4'>
             {/* Values set based on screen size */}
             <Link href='/'>
-              <div onClick={() => handleItemClick( 7.7)}>
+              <div onClick={() => handleItemClick(7)}>
                 <Image
                   src='/icons/arrow-right.svg'
                   width={20}
@@ -102,7 +102,7 @@ const SideNav = () => {
               </div>
             </Link>
             <Link href='/'>
-              <div onClick={() => handleItemClick(8.35)}>
+              <div onClick={() => handleItemClick(7.8)}>
                 <Image
                   src='/icons/setting.svg'
                   width={20}
@@ -112,7 +112,7 @@ const SideNav = () => {
               </div>
             </Link>
             <Link href='/'>
-              <div onClick={() => handleItemClick(8.56)}>
+              <div onClick={() => handleItemClick(8.3)}>
                 <Image
                   src='/icons/logout.svg'
                   width={20}
