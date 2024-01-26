@@ -105,7 +105,7 @@ export function RevenueChart() {
                   <p
                     key={entry.name}
                     style={{
-                      backgroundColor: "#000000",
+                      backgroundColor: "#090C2C",
                       color: "white",
                       paddingTop: "10px",
                       paddingBottom: "10px",

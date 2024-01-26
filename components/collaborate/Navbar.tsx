@@ -13,7 +13,7 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import Mobilenav from "./Mobilenav";
+import Mobilenav from "./NavigationMobile";
 import { AiOutlineSetting, AiOutlineLogout } from "react-icons/ai";
 
 const Navbar = () => {

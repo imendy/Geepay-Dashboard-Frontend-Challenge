@@ -4,7 +4,7 @@ import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
 import { Bell, Menu } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
-import { ModeToggle } from './ModeToggle'
+import { ModeToggle } from './LightDarkSwitch'
 
 const Mobilenav = () => {
     const [activeItemIndex, setActiveItemIndex] = useState<number | null>(null);

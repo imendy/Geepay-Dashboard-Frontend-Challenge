@@ -3,7 +3,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import React, { useState } from 'react';
-import { ModeToggle } from './ModeToggle'
+import { ModeToggle } from './LightDarkSwitch'
 
 const SideNav = () => {
     const [activeItemIndex, setActiveItemIndex] = useState<number | null>(null);

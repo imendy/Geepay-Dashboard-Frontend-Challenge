@@ -16,7 +16,7 @@ import {
     DialogTrigger,
 } from "@/components/ui/dialog"
 import { FileDown } from 'lucide-react'
-import Invoice from './shared/Invoice'
+import Invoice from './collaborate/Receipt'
 import Link from 'next/link'
 const invoicesData = [
     {

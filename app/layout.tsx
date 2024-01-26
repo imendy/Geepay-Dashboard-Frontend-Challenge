@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import { Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
-import Navbar from "@/components/shared/Navbar";
-import SideNav from "@/components/shared/SideNav";
-import { ThemeProvider } from "@/components/shared/ThemeProvider";
+import Navbar from "@/components/collaborate/Navbar";
+import SideNav from "@/components/collaborate/SideMenu";
+import { ThemeProvider } from "@/components/collaborate/ThemeProvider";
 
 
 const inter = Plus_Jakarta_Sans({ subsets: ["latin"] });

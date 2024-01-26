@@ -1,5 +1,5 @@
 
-import { RevenueChart } from "@/components/RevenueChart";
+import { RevenueChart } from "@/components/SalesChart";
 import {
   Card,
 } from "@/components/ui/card"
@@ -11,10 +11,10 @@ import {
 import { ChevronDown, TrendingUp } from "lucide-react";
 import Image from "next/image";
 import { Badge } from "@/components/ui/badge"
-import OrdersTable from "@/components/OrdersTable";
+import OrdersTable from "@/components/SalesGrid";
 import { Button } from "@/components/ui/button";
 import { Progress, Progress2, Progress3, Progress4 } from "@/components/ui/progress";
-import { MainCalender } from "@/components/MainCalender";
+import { MainCalender } from "@/components/Schedule";
 
 
 
