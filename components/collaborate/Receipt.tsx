@@ -5,10 +5,20 @@ import { DownloadIcon, PrinterIcon } from "lucide-react"
 
 
 const Invoice = ({ data }: any) => {
+
+   
+    let overallTotal = 0; 
+    console.log(data);
+
     return (
         <div className="w-full p-4 rounded-lg shadow-md border">
             <div className="flex justify-between items-center mb-6">
-                <h1 className="text-2xl font-bold  text-primary">Invoice</h1>
+            <div>
+                <h1 className="text-2xl font-bold mb-1 text-primary">Receipt</h1>
+                
+            <p className="text-sm text-muted-foreground w-[220px]">If you have any questions or concerns regarding this transaction, please do not hesitate to contact our customer service.</p>
+            </div>
+               
                 <div className="flex space-x-4">
                     <Button size="sm" variant="outline">
                         <DownloadIcon className="h-4 w-4" />
@@ -20,9 +30,11 @@ const Invoice = ({ data }: any) => {
                     </Button>
                 </div>
             </div>
+
+
             <div className="grid gap-4 mb-6">
                 <div className="grid gap-1">
-                    <Label htmlFor="recipient">Recipient</Label>
+                    <Label htmlFor="recipient">Name</Label>
                     <div className="text-sm text-muted-foreground">{data.name}</div>
                 </div>
                 <div className="grid gap-1">
@@ -30,12 +42,16 @@ const Invoice = ({ data }: any) => {
                     <div className="text-sm text-muted-foreground">124, Adeniyi Jones, Ikeja Lagos state </div>
                 </div>
                 <div className="grid gap-1">
-                    <Label htmlFor="invoice-date">Invoice Date</Label>
+                    <Label htmlFor="invoice-date">Receipt Date</Label>
                     <div className="text-sm text-muted-foreground">{data.date}</div>
                 </div>
                 <div className="grid gap-1">
                     <Label htmlFor="due-date">Status</Label>
                     <div className="text-sm text-muted-foreground">{data.status}</div>
+                </div>
+                <div className="grid gap-1">
+                    <Label htmlFor="due-date">Amount</Label>
+                    <div className="text-sm text-muted-foreground">{data.amount}</div>
                 </div>
             </div>
             <Table>
@@ -48,23 +64,48 @@ const Invoice = ({ data }: any) => {
                     </TableRow>
                 </TableHeader>
                 <TableBody>
-                    <TableRow>
-                        <TableCell>Item 1</TableCell>
-                        <TableCell>2</TableCell>
-                        <TableCell>$10.00</TableCell>
-                        <TableCell>$20.00</TableCell>
-                    </TableRow>
-                    <TableRow>
-                        <TableCell>Item 2</TableCell>
-                        <TableCell>1</TableCell>
-                        <TableCell>$5.00</TableCell>
-                        <TableCell>$5.00</TableCell>
-                    </TableRow>
-                </TableBody>
+  
+
+<TableRow>
+        <TableCell>Item 1</TableCell>
+        <TableCell>{data.quantity}</TableCell>
+        <TableCell>${data.amount}</TableCell>
+        <TableCell>
+          {typeof data.amount === 'number' && typeof data.quantity === 'number'
+            ? (() => {
+                const total = data.amount * data.quantity;
+                overallTotal += total; 
+                return `$${total.toLocaleString()}`;
+              })()
+            : 'Invalid'}
+        </TableCell>
+      </TableRow>
+      <TableRow>
+        <TableCell>Item 2</TableCell>
+        <TableCell>{data.quantity}</TableCell>
+        <TableCell>${data.amount}</TableCell>
+        <TableCell>
+          {typeof data.amount === 'number' && typeof data.quantity === 'number'
+            ? (() => {
+                const total = data.amount * data.quantity;
+                overallTotal += total; 
+                return `$${total.toLocaleString()}`;
+              })()
+            : 'Invalid'}
+        </TableCell>
+      </TableRow>
+
+
+</TableBody>
+
             </Table>
             <div className="flex justify-end mt-4">
                 <div className="text-right">
-                    <div className="text-lg font-bold text-gray-800 dark:text-white mb-4">Total: $25.00</div>
+                  
+                    <div className="text-lg font-bold text-gray-600 dark:text-white mb-4">
+         
+          {`Overall Total: $${overallTotal.toLocaleString()}`}
+        </div>
                 </div>
             </div>
         </div>
