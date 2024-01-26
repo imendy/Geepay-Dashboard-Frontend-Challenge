@@ -9,7 +9,7 @@ import {
   XAxis,
   YAxis,
 } from "recharts";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const data = [
   {
@@ -65,8 +65,28 @@ const data = [
 export function RevenueChart() {
   const [activeBar, setActiveBar] = useState(null);
 
+  const [containerWidth, setContainerWidth] = useState("100%");
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth < 768) {
+        setContainerWidth("110%");
+      } else {
+        setContainerWidth("100%");
+      }
+    };
+
+    handleResize(); // Call initially
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   return (
-    <ResponsiveContainer width="100%" height={350} className="text-foreground">
+    <div style={{ width: "100%", overflowX: "auto" }}>
+    <ResponsiveContainer width={containerWidth} height={350} className="text-foreground">
       <BarChart data={data}>
         <CartesianGrid strokeDasharray="3 3" />
 
@@ -133,5 +153,6 @@ export function RevenueChart() {
         />
       </BarChart>
     </ResponsiveContainer>
+    </div>
   );
 }

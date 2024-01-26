@@ -128,7 +128,7 @@ const SideNav = () => {
 
             {/* Indicator div for active item */}
             <div
-                className="absolute top-0 right-0 dark:bg-white bg-black h-6 w-[4px] transform -translate-y-2/4 rounded-tl rounded-bl"
+                className="absolute top-0 right-0 dark:bg-white bg-[#060714da] h-6 w-[3px] transform -translate-y-2/4 rounded-tl rounded-bl"
                 style={{ top: activeItemIndex !== null ? `calc(${activeItemIndex + 1} * 56px)` : 0 }}
             ></div>
 
@@ -143,33 +143,3 @@ export default SideNav;
 
 
 
-{/* <Link href='/'>
-<div onClick={() => handleItemClick(8.75)}>
-  <Image
-    src='/icons/arrow-right.svg'
-    width={20}
-    height={20}
-    alt='logo'
-  />
-</div>
-</Link>
-<Link href='/'>
-<div onClick={() => handleItemClick(9.3)}>
-  <Image
-    src='/icons/setting.svg'
-    width={20}
-    height={20}
-    alt='logo'
-  />
-</div>
-</Link>
-<Link href='/'>
-<div onClick={() => handleItemClick(9.9)}>
-  <Image
-    src='/icons/logout.svg'
-    width={20}
-    height={20}
-    alt='logo'
-  />
-</div>
-</Link> */}
