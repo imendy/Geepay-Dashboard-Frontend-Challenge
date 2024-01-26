@@ -27,7 +27,7 @@ const Invoice = ({ data }: any) => {
                 </div>
                 <div className="grid gap-1">
                     <Label htmlFor="address">Address</Label>
-                    <div className="text-sm text-muted-foreground">123 Main St, Anytown, CA 12345</div>
+                    <div className="text-sm text-muted-foreground">124, Adeniyi Jones, Ikeja Lagos state </div>
                 </div>
                 <div className="grid gap-1">
                     <Label htmlFor="invoice-date">Invoice Date</Label>
