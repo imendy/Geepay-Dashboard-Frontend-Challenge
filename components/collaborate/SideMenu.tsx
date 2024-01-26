@@ -2,40 +2,18 @@
 'use client'
 import Image from 'next/image'
 import Link from 'next/link'
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState } from 'react';
 import { ModeToggle } from './LightDarkSwitch'
 
 const SideNav = () => {
     const [activeItemIndex, setActiveItemIndex] = useState<number | null>(null);
-    const [menuHeight, setMenuHeight] = useState<number | null>(null);
-    const menuRef = useRef<HTMLDivElement>(null);
-
-    useEffect(() => {
-        // Measure the height of a single menu item
-        if (menuRef.current) {
-            const itemHeight = menuRef.current.clientHeight;
-            setMenuHeight(itemHeight);
-        }
-    }, []);
+    
 
     const handleItemClick = (index: number) => {
         setActiveItemIndex(index);
     };
 
-      // Calculate dynamic values based on screen width
-      const getDynamicValues = () => {
-        const screenWidth = typeof window !== 'undefined' ? window.innerWidth : 0;
-    
-        if (screenWidth >= 1450) {
-            return [8.75, 9.3, 9.9];
-        } else if (screenWidth >= 768) {
-            return [11, 11.5, 12.5];
-        } else {
-            // Add more conditions as needed for smaller screens
-            return [/* values for smaller screens */];
-        }
-    };
-    const [dynamicValue1, dynamicValue2, dynamicValue3] = getDynamicValues();
+     
 
     return (
         <div className='hidden md:flex flex-col justify-between pb-10 h-screen pt-28 border-r  px-4 relative'>
@@ -116,48 +94,45 @@ const SideNav = () => {
             </div>
             <div className='flex mt-36 flex-col ml-6 justify-center  gap-4 items-center w-fit px-4'>
             {/* Values set based on screen size */}
-            <Link href='/'>
-                    <div ref={menuRef} onClick={() => handleItemClick(dynamicValue1)}>
-                        <Image
-                            src='/icons/arrow-right.svg'
-                            width={20}
-                            height={20}
-                            alt='logo'
-                        />
-                    </div>
-                </Link>
-                <Link href='/'>
-                    <div ref={menuRef} onClick={() => handleItemClick(dynamicValue2)}>
-                        <Image
-                            src='/icons/setting.svg'
-                            width={20}
-                            height={20}
-                            alt='logo'
-                        />
-                    </div>
-                </Link>
-                <Link href='/'>
-                    <div ref={menuRef} onClick={() => handleItemClick(dynamicValue3)}>
-                        <Image
-                            src='/icons/logout.svg'
-                            width={20}
-                            height={20}
-                            alt='logo'
-                        />
-                    </div>
-                </Link>
+           <Link href='/'>
+<div onClick={() => handleItemClick(8.75)}>
+  <Image
+    src='/icons/arrow-right.svg'
+    width={20}
+    height={20}
+    alt='logo'
+  />
+</div>
+</Link>
+<Link href='/'>
+<div onClick={() => handleItemClick(9.3)}>
+  <Image
+    src='/icons/setting.svg'
+    width={20}
+    height={20}
+    alt='logo'
+  />
+</div>
+</Link>
+<Link href='/'>
+<div onClick={() => handleItemClick(9.9)}>
+  <Image
+    src='/icons/logout.svg'
+    width={20}
+    height={20}
+    alt='logo'
+  />
+</div>
+</Link>
           </div>
 
             {/* Indicator div for active item */}
-            {/* <div
+            <div
                 className="absolute top-0 right-0 dark:bg-white bg-black h-6 w-[4px] transform -translate-y-2/4 rounded-tl rounded-bl"
                 style={{ top: activeItemIndex !== null ? `calc(${activeItemIndex + 1} * 56px)` : 0 }}
-            ></div> */}
-
-<div
-                className="absolute top-0 right-0 dark:bg-white bg-black h-6 w-[3px] transform -translate-y-2/4 rounded-tl rounded-bl"
-                style={{ top: activeItemIndex !== null && menuHeight !== null ? `calc(${activeItemIndex} * ${menuHeight}px)` : 0 }}
             ></div>
+
+
 
         </div>
     )
