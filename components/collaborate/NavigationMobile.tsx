@@ -21,7 +21,7 @@ const Mobilenav = () => {
           <span className='flex p-4 '>
             <Bell />
           </span>
-          <div className='flex justify-center items-center flex-col gap-8 w-fit'>
+          <div className='flex max-[380px]:gap-[24px]   justify-center items-center flex-col gap-8 w-fit'>
             <Link href='/' className='block dark:hidden'>
               <div onClick={() => handleItemClick(0.85)}>
                 <Image
@@ -95,9 +95,10 @@ const Mobilenav = () => {
             </Link>
             <ModeToggle />
           </div>
-          <div className='flex mt-36 flex-col justify-center  gap-6 items-center w-fit px-4'>
+          <div className='flex mt-36 max-[380px]:mt-16 flex-col justify-center  gap-6 items-center w-fit px-4'>
             <Link href='/'>
               <div onClick={() => handleItemClick(9.85)}>
+            
                 <Image
                   src='/icons/arrow-right.svg'
                   width={24}
@@ -129,7 +130,7 @@ const Mobilenav = () => {
           </div>
           {/* Indicator div for active item */}
           <div
-            className="absolute top-0 left-0 dark:bg-white bg-black h-8 w-[5px] transform -translate-y-2/4 rounded-tr rounded-br"
+            className="absolute top-0 left-0 dark:bg-white bg-black h-6 w-[3px] transform -translate-y-2/4 rounded-tr rounded-br"
             style={{ top: activeItemIndex !== null ? `calc(${activeItemIndex + 1} * 56px)` : 0 }}
           ></div>
         </SheetContent>
