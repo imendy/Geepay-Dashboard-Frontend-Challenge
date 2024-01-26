@@ -20,8 +20,8 @@ const SideNav = () => {
                     <div onClick={() => handleItemClick(0.92)}>
                         <Image
                             src='/icons/grid.svg'
-                            width={40}
-                            height={40}
+                            width={30}
+                            height={30}
                             alt='logo'
                             className=''
                         />
@@ -31,8 +31,8 @@ const SideNav = () => {
                     <div onClick={() => handleItemClick(0.92)}>
                         <Image
                             src='/icons/grid-dark.svg'
-                            width={26}
-                            height={26}
+                            width={20}
+                            height={20}
                             alt='logo'
                         />
                     </div>
@@ -41,8 +41,8 @@ const SideNav = () => {
                     <div onClick={() => handleItemClick(1.85)}>
                         <Image
                             src='/icons/trend-up.svg'
-                            width={24}
-                            height={24}
+                            width={20}
+                            height={20}
                             alt='logo'
                         />
                     </div>
@@ -51,8 +51,8 @@ const SideNav = () => {
                     <div onClick={() => handleItemClick(2.85)}>
                         <Image
                             src='/icons/Icon.svg'
-                            width={40}
-                            height={40}
+                            width={30}
+                            height={30}
                             alt='logo'
                         />
                     </div>
@@ -61,8 +61,8 @@ const SideNav = () => {
                     <div onClick={() => handleItemClick(3.85)}>
                         <Image
                             src='/icons/box.svg'
-                            width={24}
-                            height={24}
+                            width={20}
+                            height={20}
                             alt='logo'
                         />
                     </div>
@@ -71,8 +71,8 @@ const SideNav = () => {
                     <div onClick={() => handleItemClick(4.7)}>
                         <Image
                             src='/icons/discount.svg'
-                            width={24}
-                            height={24}
+                            width={20}
+                            height={20}
                             alt='logo'
                         />
                     </div>
@@ -81,22 +81,22 @@ const SideNav = () => {
                     <div onClick={() => handleItemClick(5.7)}>
                         <Image
                             src='/icons/info.svg'
-                            width={24}
-                            height={24}
+                            width={20}
+                            height={20}
                             alt='logo'
                         />
                     </div>
                 </Link>
                 <ModeToggle />
             </div>
-            <div className='flex mt-36 flex-col ml-4 justify-center  gap-4 items-center w-fit px-4'>
+            <div className='flex mt-36 flex-col ml-6 justify-center  gap-4 items-center w-fit px-4'>
             {/* Values set based on screen size */}
             <Link href='/'>
               <div onClick={() => handleItemClick(window.innerWidth >= 1500 ? 9.7 : 9.95)}>
                 <Image
                   src='/icons/arrow-right.svg'
-                  width={24}
-                  height={24}
+                  width={20}
+                  height={20}
                   alt='logo'
                 />
               </div>
@@ -105,8 +105,8 @@ const SideNav = () => {
               <div onClick={() => handleItemClick(window.innerWidth >= 1500 ? 10.35 : 10.6)}>
                 <Image
                   src='/icons/setting.svg'
-                  width={24}
-                  height={24}
+                  width={20}
+                  height={20}
                   alt='logo'
                 />
               </div>
@@ -115,8 +115,8 @@ const SideNav = () => {
               <div onClick={() => handleItemClick(window.innerWidth >= 1500 ? 10.95 : 11.2)}>
                 <Image
                   src='/icons/logout.svg'
-                  width={24}
-                  height={24}
+                  width={20}
+                  height={20}
                   alt='logo'
                 />
               </div>

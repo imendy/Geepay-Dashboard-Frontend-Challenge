@@ -5,6 +5,7 @@ import React, { useState } from "react";
 import { Avatar, AvatarFallback, AvatarImage } from "../ui/avatar";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
+import Link from "next/link";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -37,7 +38,14 @@ const Navbar = () => {
       <div className="flex items-center justify-between mx-auto w-full">
         <span className="flex items-center gap-4 ml-8">
           <div className=" ">
-            <Image src="/icons/Logo.svg" width={40} height={40} alt="logo" />
+            <Link href="/">
+              <Image
+               src="/icons/Logo.svg"
+                width={24}
+                height={24}
+                alt="dashboard"
+              />
+            </Link>
           </div>
           <h1 className="text-md ml-16 md:text-2xl font-semibold hidden md:block">
             Dashboard
@@ -46,13 +54,7 @@ const Navbar = () => {
         <div className="hidden md:flex items-center space-x-4">
           <div className="hidden bg-white md:flex items-center space-x-2 border rounded-full px-4 pr-36 py-2.5 relative">
             <Search className="w-5 h-5 text-gray-400" />
-            {/* <Input
-                            className="outline-none border-none bg-transparent dark:text-black flex-grow"
-                            placeholder="Search..."
-                            type="search"
-                            value={searchText}
-                            onChange={(e) => setSearchText(e.target.value)}
-                        /> */}
+           
 
             <input
               className="outline-none border-none bg-transparent dark:text-black flex-grow "
