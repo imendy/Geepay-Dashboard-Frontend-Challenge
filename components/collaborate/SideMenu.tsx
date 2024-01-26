@@ -16,7 +16,7 @@ const SideNav = () => {
      
 
     return (
-        <div className='hidden md:flex flex-col justify-between pb-10 h-screen pt-28 border-r  px-4 relative'>
+        <div className='hidden w-[90px] md:flex flex-col justify-between pb-10 h-screen pt-28 border-r  px-4 relative'>
 
             <div className='flex justify-center items-center flex-col gap-8 mt-[9px]'>
                 <Link href='/' className='block  dark:hidden'>
