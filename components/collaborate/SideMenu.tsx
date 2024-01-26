@@ -29,7 +29,7 @@ const SideNav = () => {
         if (screenWidth >= 1450) {
             return [8.75, 9.3, 9.9];
         } else if (screenWidth >= 768) {
-            return [10, 11, 12];
+            return [11, 11.5, 12.5];
         } else {
             // Add more conditions as needed for smaller screens
             return [/* values for smaller screens */];
