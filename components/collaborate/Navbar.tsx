@@ -37,7 +37,7 @@ const Navbar = () => {
     <header className="bg-background w-full py-4 px-4 mx-auto z-50">
       <div className="flex items-center justify-between mx-auto w-full">
         <span className="flex items-center gap-4 ml-8">
-          <div className=" ">
+          <div className="ml-4 ">
             <Link href="/">
               <Image
                src="/icons/Logo.svg"

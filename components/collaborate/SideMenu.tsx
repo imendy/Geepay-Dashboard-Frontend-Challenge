@@ -156,7 +156,7 @@ const SideNav = () => {
             ></div> */}
 
 <div
-                className="absolute top-0 right-0 dark:bg-white bg-black h-6 w-[4px] transform -translate-y-2/4 rounded-tl rounded-bl"
+                className="absolute top-0 right-0 dark:bg-white bg-black h-6 w-[3px] transform -translate-y-2/4 rounded-tl rounded-bl"
                 style={{ top: activeItemIndex !== null && menuHeight !== null ? `calc(${activeItemIndex} * ${menuHeight}px)` : 0 }}
             ></div>
 
