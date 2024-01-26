@@ -24,8 +24,8 @@ const SideNav = () => {
 
       // Calculate dynamic values based on screen width
       const getDynamicValues = () => {
-        const screenWidth = window.innerWidth;
-
+        const screenWidth = typeof window !== 'undefined' ? window.innerWidth : 0;
+    
         if (screenWidth >= 1450) {
             return [8.75, 9.3, 9.9];
         } else if (screenWidth >= 768) {
@@ -35,7 +35,6 @@ const SideNav = () => {
             return [/* values for smaller screens */];
         }
     };
-
     const [dynamicValue1, dynamicValue2, dynamicValue3] = getDynamicValues();
 
     return (
